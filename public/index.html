@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App dengan Google Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-container" class="auth-container">
+        <div class="auth-box">
+            <h2>Login untuk Chat</h2>
+            <button id="google-login" class="auth-btn google-btn">
+                <i class="material-icons">account_circle</i>
+                Login dengan Google
+            </button>
+        </div>
+    </div>
 
+    <div id="chat-container" class="chat-container">
+        <div class="chat-header">
+            <div class="user-info">
+                <h3 id="user-name">Pengguna</h3>
+                <p id="user-status">Online</p>
+            </div>
+            <button id="logout-btn" class="logout-btn">
+                <i class="material-icons">exit_to_app</i>
+            </button>
+        </div>
+
+        <div class="contact-list" id="contact-list">
+            <div class="no-contacts">Memuat kontak...</div>
+        </div>
+
+        <div id="message-container" class="message-container">
+            <div class="no-chat-selected">
+                <p>Pilih kontak untuk memulai percakapan</p>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="message-input" placeholder="Ketik pesan..." disabled>
+            <button id="send-btn" class="send-btn" disabled>
+                <i class="material-icons">send</i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
